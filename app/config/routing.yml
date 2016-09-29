@@ -1,3 +1,7 @@
-app:
-    resource: "@AppBundle/Controller/"
+i_triad_status:
+    resource: "@iTriadBundle/Controller/StatusController.php"
     type:     annotation
+
+i_triad:
+    resource: "@iTriadBundle/Resources/config/routing.php"
+    prefix:   /

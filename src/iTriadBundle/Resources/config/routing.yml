@@ -1,0 +1,4 @@
+i_triad_status:
+    resource: "@iTriadBundle/Resources/config/routing/status.php"
+    prefix:   /status
+
