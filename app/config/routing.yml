@@ -1,3 +1,11 @@
+i_triad_orcamento:
+    resource: "@iTriadBundle/Controller/OrcamentoController.php"
+    type:     annotation
+
+i_triad_funcionario:
+    resource: "@iTriadBundle/Controller/FuncionarioController.php"
+    type:     annotation
+
 i_triad_status:
     resource: "@iTriadBundle/Controller/StatusController.php"
     type:     annotation

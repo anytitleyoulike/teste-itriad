@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Orcamento</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Valorplanejado</th>
+                <td>{{ orcamento.valorPlanejado }}</td>
+            </tr>
+            <tr>
+                <th>Valorgasto</th>
+                <td>{{ orcamento.valorGasto }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ orcamento.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('orcamento_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('orcamento_edit', { 'id': orcamento.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

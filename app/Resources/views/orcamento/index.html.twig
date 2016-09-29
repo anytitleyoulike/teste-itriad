@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Orcamento list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Valorplanejado</th>
+                <th>Valorgasto</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for orcamento in orcamentos %}
+            <tr>
+                <td><a href="{{ path('orcamento_show', { 'id': orcamento.id }) }}">{{ orcamento.valorPlanejado }}</a></td>
+                <td>{{ orcamento.valorGasto }}</td>
+                <td>{{ orcamento.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('orcamento_show', { 'id': orcamento.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('orcamento_edit', { 'id': orcamento.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('orcamento_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
