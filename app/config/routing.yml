@@ -1,3 +1,11 @@
+i_triad_cliente:
+    resource: "@iTriadBundle/Controller/ClienteController.php"
+    type:     annotation
+
+i_triad_projeto:
+    resource: "@iTriadBundle/Controller/ProjetoController.php"
+    type:     annotation
+
 i_triad_orcamento:
     resource: "@iTriadBundle/Controller/OrcamentoController.php"
     type:     annotation

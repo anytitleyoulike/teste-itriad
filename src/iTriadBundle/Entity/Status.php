@@ -28,7 +28,10 @@ class Status
      */
     private $id;
 
-
+    public function __toString()
+    {
+        return strval($this->id);
+    }
 
     /**
      * Set descricao

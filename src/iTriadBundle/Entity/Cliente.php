@@ -5,26 +5,19 @@ namespace iTriadBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Funcionario
+ * Cliente
  *
- * @ORM\Table(name="funcionario")
+ * @ORM\Table(name="cliente")
  * @ORM\Entity
  */
-class Funcionario
+class Cliente
 {
     /**
      * @var string
      *
-     * @ORM\Column(name="nome", type="string", length=255, nullable=true)
+     * @ORM\Column(name="nome", type="string", length=255, nullable=false)
      */
     private $nome;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="cargo", type="string", length=255, nullable=true)
-     */
-    private $cargo;
 
     /**
      * @var integer
@@ -45,7 +38,7 @@ class Funcionario
      *
      * @param string $nome
      *
-     * @return Funcionario
+     * @return Cliente
      */
     public function setNome($nome)
     {
@@ -62,30 +55,6 @@ class Funcionario
     public function getNome()
     {
         return $this->nome;
-    }
-
-    /**
-     * Set cargo
-     *
-     * @param string $cargo
-     *
-     * @return Funcionario
-     */
-    public function setCargo($cargo)
-    {
-        $this->cargo = $cargo;
-
-        return $this;
-    }
-
-    /**
-     * Get cargo
-     *
-     * @return string
-     */
-    public function getCargo()
-    {
-        return $this->cargo;
     }
 
     /**
